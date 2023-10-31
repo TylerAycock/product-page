@@ -1,0 +1,17 @@
+.product__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    padding:100px 50px;
+}
+
+img{
+    border-radius: 15px;
+}
+
+.thumbnails{
+    border: 1px solid;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
