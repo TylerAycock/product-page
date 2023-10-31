@@ -1,19 +1,28 @@
 import Buttons from "./Buttons";
 import "./Shoe.css";
 import { useState } from "react";
-import one from "../assets/images/image-product-1.jpg";
-import thumbnail from "../assets/images/image-product-1-thumbnail.jpg";
+import oneMain from "../assets/images/image-product-1.jpg";
+import twoMain from "../assets/images/image-product-2.jpg";
+import threeMain from "../assets/images/image-product-3.jpg";
+import fourMain from "../assets/images/image-product-4.jpg";
+import one from "../assets/images/image-product-1-thumbnail.jpg";
+import two from "../assets/images/image-product-2-thumbnail.jpg";
+import three from "../assets/images/image-product-3-thumbnail.jpg";
+import four from "../assets/images/image-product-4-thumbnail.jpg";
+
 
 const Shoe = () => {
+    const [image, setImage] =useState(`${twoMain}`)
+
   return (
     <main className="product__container">
       <div className="images__container">
-        <img src={one} alt="" />
+        <img src={image} />
         <div className="thumbnails">
-          <img src={thumbnail} className="thumbnail" />
-          <img src={thumbnail} className="thumbnail" />
-          <img src={thumbnail} className="thumbnail" />
-          <img src={thumbnail} className="thumbnail" />
+          <img src={one} className="thumbnail one" onClick={()=>setImage(`${oneMain}`)}/>
+          <img src={two} className="thumbnail two" onClick={()=>setImage(`${twoMain}`)}/>
+          <img src={three} className="thumbnail three" onClick={()=>setImage(`${threeMain}`)}/>
+          <img src={four} className="thumbnail" onClick={()=>setImage(`${fourMain}`)}/>
         </div>
       </div>
       <div className="details__container">
