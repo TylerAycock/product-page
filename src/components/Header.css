@@ -1,0 +1,39 @@
+/* main container styling */
+.header__container{
+    /* margin: 50px 0px; */
+    padding: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+
+/* logo and navbar */
+
+.left-side__container,
+.right-side__container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.left-side__container h1{
+    font-weight: 700;
+    font-size: 2em;
+    /* font-stretch: ultra-condensed; need to figure out how to condense it */
+}
+
+.header__container nav a{
+   text-decoration: none;
+   color: black; 
+   margin-right: 40px;
+}
+
+/* user and cart */
+
+.avatar{
+    max-width: 45%;
+    padding: 0px;
+    margin: 0px;
+}
