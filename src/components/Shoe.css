@@ -38,7 +38,6 @@ img{
 
 .details__container{
     display: grid;
-    border: 1px solid;
     padding: 75px 0px;
 }
 
