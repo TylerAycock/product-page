@@ -26,17 +26,22 @@
 }
 
 .add-to-cart{
-    padding: 10px 100px;
+    /* padding: 10px 100px; */
+    width: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     color: white;
     background-color: var(--orange);
     font-weight: 700;
+    box-shadow: 3px 3px 3px hsla(26, 100%, 55%, 0.5);
 }
 
 .cart{
-    font-size: 1.5em;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
 }
 
 

@@ -77,4 +77,5 @@ img{
 
 .original-price{
     color: var(--grayish-blue);
+    font-weight: 700;
 }
