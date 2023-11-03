@@ -9,12 +9,15 @@ import one from "../assets/images/image-product-1-thumbnail.jpg";
 import two from "../assets/images/image-product-2-thumbnail.jpg";
 import three from "../assets/images/image-product-3-thumbnail.jpg";
 import four from "../assets/images/image-product-4-thumbnail.jpg";
+import Modal from "./modal/Modal";
 
-const Shoe = () => {
-  const [image, setImage] = useState(`${twoMain}`);
+const Shoe = ({modal, setModal}) => {
+
+  const [image, setImage] = useState(`${oneMain}`);
 
   return (
     <main className="product__container">
+      {modal && <Modal modal={modal} setModal={setModal}/>}
       <div className="images__container">
         <img src={image} />
         <div className="thumbnails">
