@@ -14,10 +14,12 @@ import Modal from "./modal/Modal";
 const Shoe = ({modal, setModal}) => {
 
   const [image, setImage] = useState(`${oneMain}`);
+  const [quantity, setQuantity] = useState(0)
 
+  console.log(quantity)
   return (
     <main className="product__container">
-      {modal && <Modal modal={modal} setModal={setModal}/>}
+      {modal && <Modal modal={modal} setModal={setModal} quanity={quantity}/>}
       <div className="images__container">
         <img src={image} />
         <div className="thumbnails">
@@ -56,7 +58,7 @@ const Shoe = ({modal, setModal}) => {
           <p className="discount">50%</p>
         </div>
         <p className="original-price">$250.00</p>
-        <Buttons />
+        <Buttons quantity ={quantity} setQuantity={setQuantity}/>
       </div>
     </main>
   );

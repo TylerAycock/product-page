@@ -2,7 +2,7 @@ import "./Buttons.css";
 import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Buttons = () => {
+const Buttons = ({quantity, setQuantity}) => {
   const [count, setCount] = useState(0);
 
   const clickHandler = (e) => {
@@ -16,6 +16,11 @@ const Buttons = () => {
     }
   };
 
+  const cartHandler = () => {
+    setQuantity(count)
+    setCount(0)
+  }
+
   return (
     <div className="buttons">
       <div className="quantity__container">
@@ -27,7 +32,7 @@ const Buttons = () => {
           +
         </button>
       </div>
-      <button className="add-to-cart">
+      <button className="add-to-cart" onClick={cartHandler}>
         <AiOutlineShoppingCart className="cart"/>
         Add to cart
       </button>
