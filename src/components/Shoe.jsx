@@ -15,11 +15,10 @@ const Shoe = ({modal, setModal}) => {
 
   const [image, setImage] = useState(`${oneMain}`);
   const [quantity, setQuantity] = useState(0)
-
-  console.log(quantity)
+  
   return (
     <main className="product__container">
-      {modal && <Modal modal={modal} setModal={setModal} quanity={quantity}/>}
+      {modal && <Modal modal={modal} setModal={setModal} quantity={quantity}/>}
       <div className="images__container">
         <img src={image} />
         <div className="thumbnails">

@@ -13,8 +13,10 @@
     background-color: var(--light-grayish-blue);
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-evenly;
+    gap: 20px;
     border-radius: 8px;
+    width: 30%;
 }
 
 .quantity__container button{
@@ -22,11 +24,11 @@
     color: var(--orange);
     font-size: 1.5em;
     font-weight: 700;
-    padding: 10px;
+    cursor: pointer;
 }
 
 .add-to-cart{
-    /* padding: 10px 100px; */
+    cursor: pointer;
     width: 50%;
     display: flex;
     align-items: center;

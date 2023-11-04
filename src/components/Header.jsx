@@ -3,9 +3,8 @@ import "./Header.css";
 import avatar from "../assets/images/image-avatar.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Header = ({ modal, setModal }) => {
+const Header = ({ modal, setModal}) => {
   const clickHandler = () => {
-    console.log(modal);
     setModal(!modal);
   };
 

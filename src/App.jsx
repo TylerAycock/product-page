@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="main__container">
-      <Header modal={modal} setModal={setModal} />
+      <Header modal={modal} setModal={setModal}/>
       <Shoe modal={modal} setModal={setModal} />
     </div>
   );

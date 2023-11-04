@@ -17,8 +17,9 @@ const Buttons = ({quantity, setQuantity}) => {
   };
 
   const cartHandler = () => {
-    setQuantity(count)
-    setCount(0)
+    setQuantity(()=>quantity+=count)
+    console.log(`quanitty in buttons: ${quantity}`)
+    // setCount(0)
   }
 
   return (
