@@ -1,0 +1,32 @@
+body.active-carousel {
+    overflow-y: hidden;
+}
+
+.carousel__container, .carousel__overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel__overlay {
+    background: rgba(49,49,49,0.8);
+}
+
+.carousel__data img{
+    max-width: 300px;
+}
+
+.close__carousel {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding: 5px 7px;
+    color: var(--white);
+}

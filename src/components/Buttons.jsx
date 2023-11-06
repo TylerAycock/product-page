@@ -28,7 +28,7 @@ const Buttons = ({quantity, setQuantity}) => {
         <button onClick={clickHandler} className="less">
           -
         </button>
-        <p>{count}</p>
+        <p className="count">{count}</p>
         <button onClick={clickHandler} className="more">
           +
         </button>

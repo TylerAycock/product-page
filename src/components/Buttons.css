@@ -1,7 +1,8 @@
+/* buttons container */
+
 .buttons{
     display: flex;
     gap: 20px;
-    /* max-height: 50px; */
 }
 
 .buttons button{
@@ -9,15 +10,26 @@
     border: none;
 }
 
+.add-to-cart, .quantity__container{
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+/* counter button */
+
 .quantity__container{
     background-color: var(--light-grayish-blue);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    border-radius: 8px;
-    width: 30%;
+    justify-items: center;
 }
+
+
+
+
 
 .quantity__container button{
     background-color: transparent;
@@ -26,6 +38,8 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+/* add to cart button */
 
 .add-to-cart{
     cursor: pointer;
@@ -40,14 +54,8 @@
     box-shadow: 3px 3px 3px hsla(26, 100%, 55%, 0.5);
 }
 
-.add-to-cart, .more{
-    padding: 12px;
-}
-
 .cart{
     font-size: 1.25em;
-    margin: 0;
-    padding: 0;
 }
 
 
