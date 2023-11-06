@@ -1,7 +1,7 @@
 .buttons{
     display: flex;
     gap: 20px;
-    max-height: 50px;
+    /* max-height: 50px; */
 }
 
 .buttons button{
@@ -38,6 +38,10 @@
     background-color: var(--orange);
     font-weight: 700;
     box-shadow: 3px 3px 3px hsla(26, 100%, 55%, 0.5);
+}
+
+.add-to-cart, .more{
+    padding: 12px;
 }
 
 .cart{

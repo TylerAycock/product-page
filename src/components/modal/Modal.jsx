@@ -2,13 +2,18 @@ import "./Modal.css";
 import one from "../../assets/images/image-product-1-thumbnail.jpg";
 import { BiTrash } from "react-icons/bi";
 
-const Modal = ({ modal, setModal, quantity }) => {
+const Modal = ({ modal, setModal, quantity, setQuantity }) => {
   const clickHandler = () => {
     console.log(`modal quantity: ${quantity}`);
     setModal(!modal);
   };
 
   const cost = `$${+quantity * 125}.00 `;
+
+  const deleteHandler = () => {
+    setQuantity(() => (quantity = 0));
+    setModal(!modal);
+  };
 
   return (
     <div className="modal__container">
@@ -30,7 +35,7 @@ const Modal = ({ modal, setModal, quantity }) => {
                 $125.00 x {quantity} <span className="cost">{cost}</span>
               </p>
             </div>
-            <BiTrash className="trash" />
+            <BiTrash className="trash" onClick={() => deleteHandler()} />
           </div>
           <button onClick={() => clickHandler()}>Checkout</button>
         </div>

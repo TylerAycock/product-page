@@ -9,11 +9,12 @@
 /* Images Section  */
 
 .images__container{
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 img{
     border-radius: 15px;
+    max-width: 100%;
 }
 
 .thumbnails{
@@ -27,19 +28,23 @@ img{
 
 .thumbnail{
     cursor: pointer;
-    border: 1px solid var(--white);
+    border: none;
+    outline: none;
+
 }
 
 .thumbnail:hover, .thumbnail:focus{
-    border: 2px solid var(--orange);
-    opacity: .5;
+    box-shadow: 0 0 2px 1px var(--orange);
+    opacity: .75;
 }
 
 /* Details Section */
 
 .details__container{
-    display: grid;
-    padding: 75px 0px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ padding: 60px 0px;
 }
 
 .details__container h2{

@@ -13,34 +13,34 @@ import Modal from "./modal/Modal";
 
 const Shoe = ({modal, setModal}) => {
 
-  const [image, setImage] = useState(`${oneMain}`);
   const [quantity, setQuantity] = useState(0)
+  const [image, setImage] = useState(`${oneMain}`);
   
   return (
     <main className="product__container">
-      {modal && <Modal modal={modal} setModal={setModal} quantity={quantity}/>}
+      {modal && <Modal modal={modal} setModal={setModal} quantity={quantity} setQuantity={setQuantity}/>}
       <div className="images__container">
         <img src={image} />
         <div className="thumbnails">
           <img
             src={one}
             className="thumbnail one"
-            onClick={() => setImage(`${oneMain}`)}
+            onMouseEnter={()=>{setImage(`${oneMain}`)}}
           />
           <img
             src={two}
             className="thumbnail two"
-            onClick={() => setImage(`${twoMain}`)}
+            onMouseEnter={()=>{setImage(`${twoMain}`)}}
           />
           <img
             src={three}
             className="thumbnail three"
-            onClick={() => setImage(`${threeMain}`)}
+            onMouseEnter={()=>{setImage(`${threeMain}`)}}
           />
           <img
             src={four}
             className="thumbnail"
-            onClick={() => setImage(`${fourMain}`)}
+            onMouseEnter={()=>{setImage(`${fourMain}`)}}
           />
         </div>
       </div>

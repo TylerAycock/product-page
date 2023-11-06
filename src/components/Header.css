@@ -46,3 +46,15 @@
     padding: 0px;
     margin: 0px;
 }
+
+.avatar, .shopping-cart{
+    cursor: pointer;
+}
+
+.shopping-cart:hover{
+    color: var(--orange);
+}
+.avatar:hover{
+    box-shadow: 0 0 2px 1px var(--orange);
+    border-radius: 50%;
+}
