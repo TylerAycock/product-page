@@ -8,17 +8,20 @@ import three from "../../assets/images/image-product-3-thumbnail.jpg";
 import four from "../../assets/images/image-product-4-thumbnail.jpg";
 
 export const CarouselData = [
-    {
-        image: `${oneMain}`
-    },
-    {
-        image: `${twoMain}`
-    },
-    {
-        image: `${threeMain}`
-    },
-    {
-        image: `${fourMain}`
-    }
-
-]
+  {
+    image: `${oneMain}`,
+    thumbnail: `${one}`,
+  },
+  {
+    image: `${twoMain}`,
+    thumbnail: `${two}`,
+  },
+  {
+    image: `${threeMain}`,
+    thumbnail: `${three}`,
+  },
+  {
+    image: `${fourMain}`,
+    thumbnail: `${four}`,
+  },
+];

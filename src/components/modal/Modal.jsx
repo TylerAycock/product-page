@@ -2,7 +2,7 @@ import "./Modal.css";
 import one from "../../assets/images/image-product-1-thumbnail.jpg";
 import { BiTrash } from "react-icons/bi";
 
-const Modal = ({ modal, setModal, quantity, setQuantity }) => {
+const Modal = ({ modal, setModal, quantity, setQuantity, count, setCount }) => {
   const clickHandler = () => {
     console.log(`modal quantity: ${quantity}`);
     setModal(!modal);
@@ -13,6 +13,7 @@ const Modal = ({ modal, setModal, quantity, setQuantity }) => {
   const deleteHandler = () => {
     setQuantity(() => (quantity = 0));
     setModal(!modal);
+    setCount(() => (count = 0));
   };
 
   return (

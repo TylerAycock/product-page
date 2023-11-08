@@ -6,13 +6,19 @@ import Carousel from "./components/carousel/Carousel";
 
 function App() {
   const [modal, setModal] = useState(false);
-
+  const [carousel, setCarousel] = useState(false);
+  console.log(carousel)
 
   return (
     <div className="main__container">
-      <Header modal={modal} setModal={setModal}/>
-      <Shoe modal={modal} setModal={setModal}/>
-      <Carousel/>
+      <Header modal={modal} setModal={setModal} />
+      <Shoe
+        modal={modal}
+        setModal={setModal}
+        carousel={carousel}
+        setCarousel={setCarousel}
+      />
+      {carousel && <Carousel carousel={carousel} setCarousel={setCarousel} />}
     </div>
   );
 }

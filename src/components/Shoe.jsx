@@ -11,36 +11,57 @@ import three from "../assets/images/image-product-3-thumbnail.jpg";
 import four from "../assets/images/image-product-4-thumbnail.jpg";
 import Modal from "./modal/Modal";
 
-const Shoe = ({modal, setModal}) => {
-
-  const [quantity, setQuantity] = useState(0)
+const Shoe = ({ modal, setModal, carousel, setCarousel }) => {
+  const [count, setCount] = useState(0);
+  const [quantity, setQuantity] = useState(0);
   const [image, setImage] = useState(`${oneMain}`);
-  
+
+  const engageCarousel = () => {
+    console.log('carousel toggled')
+    setCarousel(!carousel)
+  }
   return (
     <main className="product__container">
-      {modal && <Modal modal={modal} setModal={setModal} quantity={quantity} setQuantity={setQuantity}/>}
+      {modal && (
+        <Modal
+          modal={modal}
+          setModal={setModal}
+          quantity={quantity}
+          setQuantity={setQuantity}
+          count={count}
+          setCount={setCount}
+        />
+      )}
       <div className="images__container">
-        <img src={image} />
+        <img src={image} onClick={() => engageCarousel()} id="main__img"/>
         <div className="thumbnails">
           <img
             src={one}
             className="thumbnail one"
-            onMouseEnter={()=>{setImage(`${oneMain}`)}}
+            onMouseEnter={() => {
+              setImage(`${oneMain}`);
+            }}
           />
           <img
             src={two}
             className="thumbnail two"
-            onMouseEnter={()=>{setImage(`${twoMain}`)}}
+            onMouseEnter={() => {
+              setImage(`${twoMain}`);
+            }}
           />
           <img
             src={three}
             className="thumbnail three"
-            onMouseEnter={()=>{setImage(`${threeMain}`)}}
+            onMouseEnter={() => {
+              setImage(`${threeMain}`);
+            }}
           />
           <img
             src={four}
             className="thumbnail"
-            onMouseEnter={()=>{setImage(`${fourMain}`)}}
+            onMouseEnter={() => {
+              setImage(`${fourMain}`);
+            }}
           />
         </div>
       </div>
@@ -57,7 +78,12 @@ const Shoe = ({modal, setModal}) => {
           <p className="discount">50%</p>
         </div>
         <p className="original-price">$250.00</p>
-        <Buttons quantity ={quantity} setQuantity={setQuantity}/>
+        <Buttons
+          quantity={quantity}
+          setQuantity={setQuantity}
+          count={count}
+          setCount={setCount}
+        />
       </div>
     </main>
   );

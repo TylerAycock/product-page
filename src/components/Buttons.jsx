@@ -1,10 +1,7 @@
 import "./Buttons.css";
-import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Buttons = ({quantity, setQuantity}) => {
-  const [count, setCount] = useState(0);
-
+const Buttons = ({ quantity, setQuantity, count, setCount }) => {
   const clickHandler = (e) => {
     if (e.target.classList.contains("less")) {
       if (count > 0) {
@@ -17,10 +14,9 @@ const Buttons = ({quantity, setQuantity}) => {
   };
 
   const cartHandler = () => {
-    setQuantity(()=>quantity=count)
-    console.log(`quanitty in buttons: ${quantity}`)
-    // setCount(0)
-  }
+    setQuantity(() => (quantity = count));
+    console.log(`quanitty in buttons: ${quantity}`);
+  };
 
   return (
     <div className="buttons">
@@ -34,7 +30,7 @@ const Buttons = ({quantity, setQuantity}) => {
         </button>
       </div>
       <button className="add-to-cart" onClick={cartHandler}>
-        <AiOutlineShoppingCart className="cart"/>
+        <AiOutlineShoppingCart className="cart" />
         Add to cart
       </button>
     </div>

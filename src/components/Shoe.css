@@ -8,13 +8,13 @@
 
 /* Images Section  */
 
-.images__container{
-    /* max-width: 100%; */
-}
-
 img{
     border-radius: 15px;
     max-width: 100%;
+}
+
+#main__img{
+    cursor: zoom-in;
 }
 
 .thumbnails{
