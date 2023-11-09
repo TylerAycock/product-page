@@ -3,7 +3,7 @@ import "./Header.css";
 import avatar from "../assets/images/image-avatar.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Header = ({ modal, setModal}) => {
+const Header = ({ modal, setModal, quantity, setQuantity }) => {
   const clickHandler = () => {
     setModal(!modal);
   };
@@ -21,10 +21,12 @@ const Header = ({ modal, setModal}) => {
         </nav>
       </div>
       <div className="right-side__container">
-        <AiOutlineShoppingCart
-          className="shopping-cart"
-          onClick={clickHandler}
-        />
+        <div className="cart__container">
+        <div className="cart__count">
+          {quantity>0 && quantity}
+        </div>
+        <AiOutlineShoppingCart className="shopping-cart" onClick={clickHandler}/>
+        </div>
         <img
           src={avatar}
           alt="user avatar"

@@ -1,6 +1,4 @@
-/* body.active-carousel {
-    overflow-y: hidden;
-} */
+
 
 /* main / overlay containers*/
 
@@ -49,7 +47,6 @@
 .active__thumb{
     box-shadow: 0 0 2px 1px var(--orange);
     opacity: .75 ;
-
 }
 
 .slide{
@@ -59,7 +56,6 @@
 
 .slide.active{
     opacity: 1;
-    /* transition-duration: 1s; */
 }
 
 /* buttons and arrows */

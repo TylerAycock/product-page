@@ -11,15 +11,16 @@ import three from "../assets/images/image-product-3-thumbnail.jpg";
 import four from "../assets/images/image-product-4-thumbnail.jpg";
 import Modal from "./modal/Modal";
 
-const Shoe = ({ modal, setModal, carousel, setCarousel }) => {
+const Shoe = ({ modal, setModal, carousel, setCarousel, quantity, setQuantity }) => {
+
   const [count, setCount] = useState(0);
-  const [quantity, setQuantity] = useState(0);
   const [image, setImage] = useState(`${oneMain}`);
 
   const engageCarousel = () => {
     console.log('carousel toggled')
     setCarousel(!carousel)
   }
+  
   return (
     <main className="product__container">
       {modal && (
