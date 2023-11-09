@@ -46,6 +46,12 @@
     max-width: 100px;
 }
 
+.active__thumb{
+    box-shadow: 0 0 2px 1px var(--orange);
+    opacity: .75 ;
+
+}
+
 .slide{
     opacity: 0;
     transition-duration: 1s ease;
@@ -53,7 +59,7 @@
 
 .slide.active{
     opacity: 1;
-    transition-duration: 1s;
+    /* transition-duration: 1s; */
 }
 
 /* buttons and arrows */

@@ -42,7 +42,9 @@ const Carousel = ({ carousel, setCarousel }) => {
                   className="close__carousel"
                   onClick={() => setCarousel(!carousel)}
                 />
-                {index === current && <img src={pic.image} alt="shoe pic" className="large__img"/>}
+                {index === current && (
+                  <img src={pic.image} alt="shoe pic" className="large__img" />
+                )}
               </div>
             );
           })}
@@ -50,9 +52,14 @@ const Carousel = ({ carousel, setCarousel }) => {
             {CarouselData.map((pic, index) => {
               return (
                 <img
+                  key={index}
                   src={pic.thumbnail}
                   alt=""
-                  className="carousel__thumbnail"
+                  className={
+                    index === current
+                      ? "carousel__thumbnail active__thumb"
+                      : "carousel__thumbnail"
+                  }
                 />
               );
             })}
