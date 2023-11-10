@@ -58,5 +58,10 @@
     font-size: 1.25em;
 }
 
+.add-to-cart:hover{
+    opacity: .75;
+    box-shadow: 3px 10px 10px hsla(26, 100%, 55%, 0.5);
+}
+
 
 

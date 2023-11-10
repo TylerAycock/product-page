@@ -29,10 +29,11 @@
    text-decoration: none;
    color: black; 
    margin-right: 40px;
+   padding-bottom: 50px;
 }
 
 .header__container nav a:hover{
-    color: var(--orange);
+    border-bottom: 5px solid var(--orange);
 }
 
 /* user and cart */
