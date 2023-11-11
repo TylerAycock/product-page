@@ -21,6 +21,10 @@
     cursor: pointer;
 }
 
+.hamburger-menu:has(input:checked){
+  
+}
+
 .hamburger-menu input, 
 .hamburger-menu::before,
 .hamburger-menu::after{
@@ -59,4 +63,22 @@
 .hamburger-menu input:checked{
    opacity: 0;
    width: 0;
+}
+
+.sidebar{
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  padding-top: (var(--hamburger-height)+var(--hamburger-margin)+1rem);
+  background: yellow;
+  /* max-width: 10rem;
+  height: 100vh; */
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar{
+  translate: 0;
 }
