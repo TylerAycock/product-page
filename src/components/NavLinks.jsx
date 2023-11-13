@@ -1,23 +1,56 @@
 import "./NavLinks.css";
+import { delay, motion } from "framer-motion";
 
 const NavLinks = (props) => {
+  const animateFrom = { opacity: 0, y: -40 };
+  const animateTo = { opacity: 1, y: 0 };
   return (
     <ul>
-      <a href="#" onClick={() => props.isMobile && props.closeMobileMenu()}>
+      <motion.a
+        href="#"
+        initial={animateFrom}
+        animate={animateTo}
+        transition={{ delay: 0.05 }}
+        onClick={() => props.isMobile && props.closeMobileMenu()}
+      >
         Collections
-      </a>
-      <a href="#" onClick={() => props.isMobile && props.closeMobileMenu()}>
+      </motion.a>
+      <motion.a
+        href="#"
+        initial={animateFrom}
+        animate={animateTo}
+        transition={{ delay: 0.15 }}
+        onClick={() => props.isMobile && props.closeMobileMenu()}
+      >
         Men
-      </a>
-      <a href="#" onClick={() => props.isMobile && props.closeMobileMenu()}>
+      </motion.a>
+      <motion.a
+        href="#"
+        initial={animateFrom}
+        animate={animateTo}
+        transition={{ delay: 0.25 }}
+        onClick={() => props.isMobile && props.closeMobileMenu()}
+      >
         Women
-      </a>
-      <a href="#" onClick={() => props.isMobile && props.closeMobileMenu()}>
+      </motion.a>
+      <motion.a
+        href="#"
+        initial={animateFrom}
+        animate={animateTo}
+        transition={{ delay: 0.35 }}
+        onClick={() => props.isMobile && props.closeMobileMenu()}
+      >
         About
-      </a>
-      <a href="#" onClick={() => props.isMobile && props.closeMobileMenu()}>
+      </motion.a>
+      <motion.a
+        href="#"
+        initial={animateFrom}
+        animate={animateTo}
+        transition={{ delay: 0.45 }}
+        onClick={() => props.isMobile && props.closeMobileMenu()}
+      >
         Contact
-      </a>
+      </motion.a>
     </ul>
   );
 };

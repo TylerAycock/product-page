@@ -10,6 +10,7 @@ import two from "../assets/images/image-product-2-thumbnail.jpg";
 import three from "../assets/images/image-product-3-thumbnail.jpg";
 import four from "../assets/images/image-product-4-thumbnail.jpg";
 import Modal from "./modal/Modal";
+import MobileCarousel from "./mobileCarousel/MobileCarousel";
 
 const Shoe = ({ modal, setModal, carousel, setCarousel, quantity, setQuantity }) => {
 
@@ -33,6 +34,7 @@ const Shoe = ({ modal, setModal, carousel, setCarousel, quantity, setQuantity })
           setCount={setCount}
         />
       )}
+      <MobileCarousel/>
       <div className="images__container">
         <img src={image} onClick={() => engageCarousel()} id="main__img"/>
         <div className="thumbnails">
