@@ -130,10 +130,10 @@
       /* cart modal */
 
       .product__container .modal__container {
-        width: 50%;
+        max-width: 50%;
         z-index: 11;
         top: 0%;
-        right: 0%;
+        right: 2.5%;
       }
  }
 
@@ -145,6 +145,10 @@
     .main__container .header__container .right-side__container{
         justify-content: end;
         gap: 20px;
+    }
+
+    .left-side__container .mobile__nav ul{
+        top: 72px;
     }
 
  }
